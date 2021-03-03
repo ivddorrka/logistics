@@ -80,23 +80,24 @@ class LogisticsSystem:
         return 'No such order.'
 
 
-vehicles = [Vehicle(1), Vehicle(2)]
-LogSystem = LogisticsSystem(vehicles)
-my_items = [Item('book',110), Item('chupachups',44)]
-my_order = Order(user_name = 'Oleg', city = 'Lviv', postoffice = 53, items = my_items)
-num = my_order.id_here
-LogSystem.placeOrder(my_order)
-print(LogSystem.trackOrder(num))
-my_items2 = [Item('flowers',11), Item('shoes',153), Item('helicopter',0.33)]
-my_order2 = Order('Andrii', 'Odessa', 3, my_items2)
-num_2 = my_order2.id_here
-LogSystem.placeOrder(my_order2)
-print(LogSystem.trackOrder(num_2))
+if __name__ == "__main__":
+    vehicles = [Vehicle(1), Vehicle(2)]
+    LogSystem = LogisticsSystem(vehicles)
+    my_items = [Item('book',110), Item('chupachups',44)]
+    my_order = Order(user_name = 'Oleg', city = 'Lviv', postoffice = 53, items = my_items)
+    num = my_order.id_here
+    LogSystem.placeOrder(my_order)
+    print(LogSystem.trackOrder(num))
+    my_items2 = [Item('flowers',11), Item('shoes',153), Item('helicopter',0.33)]
+    my_order2 = Order('Andrii', 'Odessa', 3, my_items2)
+    num_2 = my_order2.id_here
+    LogSystem.placeOrder(my_order2)
+    print(LogSystem.trackOrder(num_2))
 
-my_items3 = [Item('coat',61.8), Item('shower',5070), Item('rollers',700)]
+    my_items3 = [Item('coat',61.8), Item('shower',5070), Item('rollers',700)]
 
-my_order3 = Order('Olesya', 'Kharkiv', 17, my_items3)
-num_3 = my_order3.id_here
+    my_order3 = Order('Olesya', 'Kharkiv', 17, my_items3)
+    num_3 = my_order3.id_here
 
-print(LogSystem.placeOrder(my_order3))
-print(LogSystem.trackOrder(num_3))
+    print(LogSystem.placeOrder(my_order3))
+    print(LogSystem.trackOrder(num_3))
